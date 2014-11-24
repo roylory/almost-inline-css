@@ -1,10 +1,10 @@
 #almost-inline.css
 
-A collection of inline-like CSS classes. It is not the best practice to use this CSS. Use it responsibly.
+A collection of inline-like CSS classes. It is not the best practice to use this CSS. Use it responsibly!
 
 ##margin, padding
 - {margin|padding}-{0|reset}
-- {margin|padding}-{left|right|top|bottom}-0
+- {margin|padding}-{left|right|top|bottom}-{0|reset}
 - {margin|padding}-{left|right|top|bottom}-{n*5}px (1<=n<=20)
 - {margin|padding}-{left|right|top|bottom}-{n*0.5}em (1<=n<=10)
 
@@ -12,16 +12,17 @@ A collection of inline-like CSS classes. It is not the best practice to use this
 - border-{0|none}
 - border-{n}px (0<n<=5)
 - border-{left|right|top|bottom}-{n}px (1<=n<=5)
-- border-color-{nnn|color} (0<=n<=F, color: any color name)
+- border-color-{nnn|color} (0<=n<=F, color: popular color names)
 
 ##background-color
-- bg-{nnn|color} (0<=n<=F, color: any color name)
+- bg-{nnn|color} (0<=n<=F, color: popular color names)
 
 ##text-decoration
-- text-decoration-{none|underline|dashed|dotted}
+- text-decoration-none
+- text-{none|underline|dashed|dotted}
 
 ##vertical-align
-- vertical-align-{middle|top|bottom}
+- valign-{middle|top|bottom}
 
 ##display
 - display-{inline|block|inline-block|none}
