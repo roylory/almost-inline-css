@@ -1,5 +1,71 @@
-test {
-  text-decoration-style: dashed;
+.bg-aqua {
+  background-color: aqua;
+}
+.bg-black {
+  background-color: black;
+}
+.bg-blue {
+  background-color: blue;
+}
+.bg-brown {
+  background-color: brown;
+}
+.bg-cyan {
+  background-color: cyan;
+}
+.bg-gold {
+  background-color: gold;
+}
+.bg-gray {
+  background-color: gray;
+}
+.bg-green {
+  background-color: green;
+}
+.bg-lime {
+  background-color: lime;
+}
+.bg-maroon {
+  background-color: maroon;
+}
+.bg-navy {
+  background-color: navy;
+}
+.bg-pink {
+  background-color: pink;
+}
+.bg-red {
+  background-color: red;
+}
+.bg-salmon {
+  background-color: salmon;
+}
+.bg-silver {
+  background-color: silver;
+}
+.bg-skyblue {
+  background-color: skyblue;
+}
+.bg-tan {
+  background-color: tan;
+}
+.bg-teal {
+  background-color: teal;
+}
+.bg-tomato {
+  background-color: tomato;
+}
+.bg-violet {
+  background-color: violet;
+}
+.bg-white {
+  background-color: white;
+}
+.bg-yellow {
+  background-color: yellow;
+}
+.bg-yellowgreen {
+  background-color: yellowgreen;
 }
 .text-decoration-none {
   text-decoration: none;
