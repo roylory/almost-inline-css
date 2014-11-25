@@ -1,3 +1,151 @@
+.border-0,
+.border-none {
+  border: none;
+}
+.border-1 {
+  border-width: 1px;
+}
+.border-2 {
+  border-width: 2px;
+}
+.border-3 {
+  border-width: 3px;
+}
+.border-4 {
+  border-width: 4px;
+}
+.border-5 {
+  border-width: 5px;
+}
+.border-left-1 {
+  border-left-width: 1px;
+}
+.border-left-2 {
+  border-left-width: 2px;
+}
+.border-left-3 {
+  border-left-width: 3px;
+}
+.border-left-4 {
+  border-left-width: 4px;
+}
+.border-left-5 {
+  border-left-width: 5px;
+}
+.border-right-1 {
+  border-right-width: 1px;
+}
+.border-right-2 {
+  border-right-width: 2px;
+}
+.border-right-3 {
+  border-right-width: 3px;
+}
+.border-right-4 {
+  border-right-width: 4px;
+}
+.border-right-5 {
+  border-right-width: 5px;
+}
+.border-top-1 {
+  border-top-width: 1px;
+}
+.border-top-2 {
+  border-top-width: 2px;
+}
+.border-top-3 {
+  border-top-width: 3px;
+}
+.border-top-4 {
+  border-top-width: 4px;
+}
+.border-top-5 {
+  border-top-width: 5px;
+}
+.border-bottom-1 {
+  border-bottom-width: 1px;
+}
+.border-bottom-2 {
+  border-bottom-width: 2px;
+}
+.border-bottom-3 {
+  border-bottom-width: 3px;
+}
+.border-bottom-4 {
+  border-bottom-width: 4px;
+}
+.border-bottom-5 {
+  border-bottom-width: 5px;
+}
+.border-color-aqua {
+  border-color: aqua;
+}
+.border-color-black {
+  border-color: black;
+}
+.border-color-blue {
+  border-color: blue;
+}
+.border-color-brown {
+  border-color: brown;
+}
+.border-color-cyan {
+  border-color: cyan;
+}
+.border-color-gold {
+  border-color: gold;
+}
+.border-color-gray {
+  border-color: gray;
+}
+.border-color-green {
+  border-color: green;
+}
+.border-color-lime {
+  border-color: lime;
+}
+.border-color-maroon {
+  border-color: maroon;
+}
+.border-color-navy {
+  border-color: navy;
+}
+.border-color-pink {
+  border-color: pink;
+}
+.border-color-red {
+  border-color: red;
+}
+.border-color-salmon {
+  border-color: salmon;
+}
+.border-color-silver {
+  border-color: silver;
+}
+.border-color-skyblue {
+  border-color: skyblue;
+}
+.border-color-tan {
+  border-color: tan;
+}
+.border-color-teal {
+  border-color: teal;
+}
+.border-color-tomato {
+  border-color: tomato;
+}
+.border-color-violet {
+  border-color: violet;
+}
+.border-color-white {
+  border-color: white;
+}
+.border-color-yellow {
+  border-color: yellow;
+}
+.border-color-yellowgreen {
+  border-color: yellowgreen;
+}
 .bg-aqua {
   background-color: aqua;
 }

@@ -10,8 +10,8 @@ A collection of inline-like CSS classes. It is not the best practice to use this
 
 ##border, border-color
 - border-{0|none}
-- border-{n}px (0<n<=5)
-- border-{left|right|top|bottom}-{n}px (1<=n<=5)
+- border-{n} (0<n<=5)
+- border-{left|right|top|bottom}-{n} (1<=n<=5)
 - border-color-{nnn|color} (0<=n<=F, color: popular color names)
 
 ##background-color

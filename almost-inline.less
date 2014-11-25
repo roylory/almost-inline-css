@@ -16,16 +16,56 @@
 @colors: aqua, black, blue, brown, cyan, gold, gray, green, lime, maroon, navy, pink, red, salmon, silver, skyblue, tan, teal, tomato, violet, white, yellow, yellowgreen;
 
 //
-// to-do: margin, padding, border, border-color
+// directions
 //
+@directions: left, right, top, bottom;
+
+//
+// to-do: margin, padding
+//
+
+//
+// border
+//
+.border- {
+    &0, &none {
+        border: none;
+    }
+    & {
+        .for(5); .-each(@i) {
+            &@{i} {
+                border-width: unit(@i, px);
+            }
+        }
+    }
+    & {
+        .for(@directions); .-each(@direction) {
+            &@{direction}- {
+                .for(5); .-each(@i) {
+                    &@{i} {
+                        border-@{direction}-width: unit(@i, px);
+                    }
+                }
+            }
+        }
+    }
+    &color- {
+        .for(@colors); .-each(@color) {
+            &@{color} {
+                border-color: @color;
+            }
+        }
+    }
+}
+// to-do: border-color-{000, 111, ... fff}
 
 //
 // background-color
 //
 .bg- {
-    .for(@colors); .-each(@value) {
-        &@{value} {
-            background-color: @value;
+    .for(@colors); .-each(@color) {
+        &@{color} {
+            background-color: @color;
         }
     }
 }
