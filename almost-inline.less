@@ -20,6 +20,15 @@
 }
 
 //
+// .for-20 (increments by 20)
+//
+.for-20(@i, @n) {.-each(@i)}
+.for-20(@n)     when (isnumber(@n)) {.for-20(20, @n)} // starts from 20
+.for-20(@i, @n) when not (@i = @n)  {
+    .for-20((@i + 20), @n);
+}
+
+//
 // colors (alphabetically ordered)
 //
 @colors: aqua, black, blue, brown, cyan, gold, gray, green, lime, maroon, navy, pink, red, salmon, silver, skyblue, tan, teal, tomato, violet, white, yellow, yellowgreen;
@@ -295,6 +304,58 @@
     }
     &fff {
         color: #fff;
+    }
+}
+
+//
+// width
+//
+.width- {
+    & {
+        .for-20(1000); .-each(@i) {
+            &@{i}px {
+                width: unit(@i, px);
+            }
+        }
+    }
+}
+
+//
+// height
+//
+.height- {
+    & {
+        .for-20(1000); .-each(@i) {
+            &@{i}px {
+                height: unit(@i, px);
+            }
+        }
+    }
+}
+
+//
+// min-width
+//
+.min-width- {
+    & {
+        .for-20(1000); .-each(@i) {
+            &@{i}px {
+                min-width: unit(@i, px);
+            }
+        }
+    }
+}
+
+//
+// min-height
+//
+.min-height- {
+    & {
+        .for-20(1000); .-each(@i) {
+            &@{i}px {
+                min-height: unit(@i, px);
+            }
+        }
     }
 }
 
