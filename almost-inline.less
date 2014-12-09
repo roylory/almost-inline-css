@@ -4,11 +4,20 @@
 .for(@i, @n) {.-each(@i)}
 .for(@n)     when (isnumber(@n)) {.for(1, @n)}
 .for(@i, @n) when not (@i = @n)  {
-    .for((@i + (@n - @i) / abs(@n - @i)), @n);
+    .for((@i + 1), @n);
 }
 .for(@array)   when (default()) {.for-impl_(length(@array))}
 .for-impl_(@i) when (@i > 1)    {.for-impl_((@i - 1))}
 .for-impl_(@i) when (@i > 0)    {.-each(extract(@array, @i))}
+
+//
+// .for-5 (increments by 5)
+//
+.for-5(@i, @n) {.-each(@i)}
+.for-5(@n)     when (isnumber(@n)) {.for-5(5, @n)} // starts from 5
+.for-5(@i, @n) when not (@i = @n)  {
+    .for-5((@i + 5), @n);
+}
 
 //
 // colors (alphabetically ordered)
@@ -21,19 +30,80 @@
 @directions: left, right, top, bottom;
 
 //
-// to-do: margin, padding
+// margin
 //
+.margin- {
+    &0,
+    &none {
+        margin: 0;
+    }
+    & {
+        .for-5(100); .-each(@i) {
+            &@{i}px {
+                margin: unit(@i, px);
+            }
+        }
+    }
+    & {
+        .for(@directions); .-each(@direction) {
+            &@{direction}- {
+                &0,
+                &none {
+                    margin-@{direction}: 0;
+                }
+                .for-5(100); .-each(@i) {
+                    &@{i}px {
+                        margin-@{direction}: unit(@i, px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+//
+// padding
+//
+.padding- {
+    &0,
+    &none {
+        padding: 0;
+    }
+    & {
+        .for-5(100); .-each(@i) {
+            &@{i}px {
+                padding: unit(@i, px);
+            }
+        }
+    }
+    & {
+        .for(@directions); .-each(@direction) {
+            &@{direction}- {
+                &0,
+                &none {
+                    padding-@{direction}: 0;
+                }
+                .for-5(100); .-each(@i) {
+                    &@{i}px {
+                        padding-@{direction}: unit(@i, px);
+                    }
+                }
+            }
+        }
+    }
+}
 
 //
 // border
 //
 .border- {
-    &0, &none {
+    &0,
+    &none {
         border: none;
     }
     & {
         .for(5); .-each(@i) {
-            &@{i} {
+            &@{i}px {
                 border-width: unit(@i, px);
             }
         }
@@ -42,7 +112,7 @@
         .for(@directions); .-each(@direction) {
             &@{direction}- {
                 .for(5); .-each(@i) {
-                    &@{i} {
+                    &@{i}px {
                         border-@{direction}-width: unit(@i, px);
                     }
                 }
@@ -55,44 +125,214 @@
                 border-color: @color;
             }
         }
+        &000 {
+            border-color: #000;
+        }
+        &111 {
+            border-color: #111;
+        }
+        &222 {
+            border-color: #222;
+        }
+        &333 {
+            border-color: #333;
+        }
+        &444 {
+            border-color: #444;
+        }
+        &555 {
+            border-color: #555;
+        }
+        &666 {
+            border-color: #666;
+        }
+        &777 {
+            border-color: #777;
+        }
+        &888 {
+            border-color: #888;
+        }
+        &999 {
+            border-color: #999;
+        }
+        &aaa {
+            border-color: #aaa;
+        }
+        &bbb {
+            border-color: #bbb;
+        }
+        &ccc {
+            border-color: #ccc;
+        }
+        &ddd {
+            border-color: #ddd;
+        }
+        &eee {
+            border-color: #eee;
+        }
+        &fff {
+            border-color: #fff;
+        }
     }
 }
-// to-do: border-color-{000, 111, ... fff}
+// to-do: border-[direction]-color, border-style, border-[direction]-style
+
 
 //
 // background-color
 //
+.background-,
 .bg- {
     .for(@colors); .-each(@color) {
         &@{color} {
             background-color: @color;
         }
     }
+    &000 {
+        background-color: #000;
+    }
+    &111 {
+        background-color: #111;
+    }
+    &222 {
+        background-color: #222;
+    }
+    &333 {
+        background-color: #333;
+    }
+    &444 {
+        background-color: #444;
+    }
+    &555 {
+        background-color: #555;
+    }
+    &666 {
+        background-color: #666;
+    }
+    &777 {
+        background-color: #777;
+    }
+    &888 {
+        background-color: #888;
+    }
+    &999 {
+        background-color: #999;
+    }
+    &aaa {
+        background-color: #aaa;
+    }
+    &bbb {
+        background-color: #bbb;
+    }
+    &ccc {
+        background-color: #ccc;
+    }
+    &ddd {
+        background-color: #ddd;
+    }
+    &eee {
+        background-color: #eee;
+    }
+    &fff {
+        background-color: #fff;
+    }
 }
-// to-do: bg-{000, 111, ... fff}
+
 
 //
-// text-decoration
+// (text) color
+//
+.color- {
+    .for(@colors); .-each(@color) {
+        &@{color} {
+            color: @color;
+        }
+    }
+    &000 {
+        color: #000;
+    }
+    &111 {
+        color: #111;
+    }
+    &222 {
+        color: #222;
+    }
+    &333 {
+        color: #333;
+    }
+    &444 {
+        color: #444;
+    }
+    &555 {
+        color: #555;
+    }
+    &666 {
+        color: #666;
+    }
+    &777 {
+        color: #777;
+    }
+    &888 {
+        color: #888;
+    }
+    &999 {
+        color: #999;
+    }
+    &aaa {
+        color: #aaa;
+    }
+    &bbb {
+        color: #bbb;
+    }
+    &ccc {
+        color: #ccc;
+    }
+    &ddd {
+        color: #ddd;
+    }
+    &eee {
+        color: #eee;
+    }
+    &fff {
+        color: #fff;
+    }
+}
+
+//
+// text-decoration & text-align
 //
 .text- {
-    &decoration-none {
-        text-decoration: none;
+    &decoration- {
+        &none {
+            text-decoration: none;
+        }
+        &underline {
+            text-decoration: underline;
+        }
+        &dashed {
+            text-decoration: dashed;
+        }
+        &dotted {
+            text-decoration: dotted;
+        }
     }
-    &underline {
-        text-decoration: underline;
-    }
-    &dashed {
-        text-decoration: dashed;
-    }
-    &dotted {
-        text-decoration: dotted;
+    &align- {
+        &left {
+            text-align: left;
+        }
+        &right {
+            text-align: right;
+        }
+        &center {
+            text-align: center;
+        }
     }
 }
 
 //
 // vertical-align
 //
-.valign- {
+.vertical-align- {
     &top {
         vertical-align: top;
     }
@@ -119,5 +359,28 @@
     }
     &none {
         display: none;
+    }
+}
+
+//
+// float & clear
+//
+.float- {
+    &left {
+        float: left;
+    }
+    &right {
+        float: right;
+    }
+}
+.clear- {
+    &left {
+        clear: left;
+    }
+    &right {
+        clear: right;
+    }
+    &both {
+        clear: both;
     }
 }
