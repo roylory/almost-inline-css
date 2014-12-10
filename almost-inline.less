@@ -11,28 +11,42 @@
 .for-impl_(@i) when (@i > 0)    {.-each(extract(@array, @i))}
 
 //
-// colors (alphabetically ordered)
+// color mixin
 //
 @colors: aqua, black, blue, brown, cyan, gold, gray, green, lime, maroon, navy, pink, red, salmon, silver, skyblue, tan, teal, tomato, violet, white, yellow, yellowgreen;
-
-//
-// hex
-//
 @hex: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F;
+.color-mixin(@name) {
+    & {
+        .for(@colors); .-each(@color) {
+            &@{color} {
+                @{name}: @color;
+            }
+        }
+    }
+    & {
+        .for(length(@hex)); .-each(@i) {
+            @h: extract(@hex, @i);
+            &@{h}@{h}@{h} {
+                @value: @i * 17 - 17;
+                @{name}: rgb(@value, @value, @value);
+            }
+        }
+    }
+}
 
 //
-// directions
+// direction list
 //
 @directions: left, right, top, bottom;
 
 //
 // margin & padding
 //
-.area_prop(@name) {
+.area-class(@name) {
     .@{name}- {
         &0,
         &none {
-            margin: 0;
+            @{name}: 0;
         }
         & {
             .for(1, 20, 5); .-each(@i) {
@@ -58,8 +72,8 @@
         }
     }    
 }
-.area_prop(margin);
-.area_prop(padding);
+.area-class(margin);
+.area-class(padding);
 
 //
 // border
@@ -76,23 +90,9 @@
             }
         }
     }
+    &,
     &color- {
-        & {
-            .for(@colors); .-each(@color) {
-                &@{color} {
-                    border-color: @color;
-                }
-            }
-        }
-        & {
-            .for(length(@hex)); .-each(@i) {
-                @h: extract(@hex, @i);
-                &@{h}@{h}@{h} {
-                    @value: @i * 17 - 17;
-                    border-color: rgb(@value, @value, @value);
-                }
-            }
-        }
+        .color-mixin(border-color);
     }
     & {
         .for(@directions); .-each(@direction) {
@@ -108,22 +108,7 @@
                 }
                 &,
                 &color- {
-                    & {
-                        .for(@colors); .-each(@color) {
-                            &@{color} {
-                                border-color: @color;
-                            }
-                        }
-                    }
-                    & {
-                        .for(length(@hex)); .-each(@i) {
-                            @h: extract(@hex, @i);
-                            &@{h}@{h}@{h} {
-                                @value: @i * 17 - 17;
-                                border-color: rgb(@value, @value, @value);
-                            }
-                        }
-                    }
+                    .color-mixin(border-color);
                 }
             }
         }
@@ -135,22 +120,7 @@
 //
 .background-,
 .bg- {
-    & {
-        .for(@colors); .-each(@color) {
-            &@{color} {
-                background-color: @color;
-            }
-        }
-    }
-    & {
-        .for(length(@hex)); .-each(@i) {
-            @h: extract(@hex, @i);
-            &@{h}@{h}@{h} {
-                @value: @i * 17 - 17;
-                background-color: rgb(@value, @value, @value);
-            }
-        }
-    }
+    .color-mixin(background-color);
 }
 
 
@@ -160,28 +130,13 @@
 .text-,
 .color-,
 .text-color- {
-    & {
-        .for(@colors); .-each(@color) {
-            &@{color} {
-                color: @color;
-            }
-        }
-    }
-    & {
-        .for(length(@hex)); .-each(@i) {
-            @h: extract(@hex, @i);
-            &@{h}@{h}@{h} {
-                @value: @i * 17 - 17;
-                color: rgb(@value, @value, @value);
-            }
-        }
-    }
+    .color-mixin(color);
 }
 
 //
 // width , height, min-width, min-height, max-width, max-height
 //
-.dimension_prop(@name) {
+.dimension-class(@name) {
     .@{name}- {
         & {
             .for(1, 50, 20); .-each(@i) {
@@ -192,12 +147,12 @@
         }
     }
 }
-.dimension_prop(width);
-.dimension_prop(height);
-.dimension_prop(min-width);
-.dimension_prop(min-height);
-.dimension_prop(max-width);
-.dimension_prop(max-height);
+.dimension-class(width);
+.dimension-class(height);
+.dimension-class(min-width);
+.dimension-class(min-height);
+.dimension-class(max-width);
+.dimension-class(max-height);
 
 //
 // text-decoration & text-align

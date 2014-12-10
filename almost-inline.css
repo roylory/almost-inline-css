@@ -320,7 +320,7 @@
 }
 .padding-0,
 .padding-none {
-  margin: 0;
+  padding: 0;
 }
 .padding-5px {
   padding: 5px;
@@ -657,120 +657,159 @@
 .border-5px {
   border-width: 5px;
 }
+.border-aqua,
 .border-color-aqua {
   border-color: aqua;
 }
+.border-black,
 .border-color-black {
   border-color: black;
 }
+.border-blue,
 .border-color-blue {
   border-color: blue;
 }
+.border-brown,
 .border-color-brown {
   border-color: brown;
 }
+.border-cyan,
 .border-color-cyan {
   border-color: cyan;
 }
+.border-gold,
 .border-color-gold {
   border-color: gold;
 }
+.border-gray,
 .border-color-gray {
   border-color: gray;
 }
+.border-green,
 .border-color-green {
   border-color: green;
 }
+.border-lime,
 .border-color-lime {
   border-color: lime;
 }
+.border-maroon,
 .border-color-maroon {
   border-color: maroon;
 }
+.border-navy,
 .border-color-navy {
   border-color: navy;
 }
+.border-pink,
 .border-color-pink {
   border-color: pink;
 }
+.border-red,
 .border-color-red {
   border-color: red;
 }
+.border-salmon,
 .border-color-salmon {
   border-color: salmon;
 }
+.border-silver,
 .border-color-silver {
   border-color: silver;
 }
+.border-skyblue,
 .border-color-skyblue {
   border-color: skyblue;
 }
+.border-tan,
 .border-color-tan {
   border-color: tan;
 }
+.border-teal,
 .border-color-teal {
   border-color: teal;
 }
+.border-tomato,
 .border-color-tomato {
   border-color: tomato;
 }
+.border-violet,
 .border-color-violet {
   border-color: violet;
 }
+.border-white,
 .border-color-white {
   border-color: white;
 }
+.border-yellow,
 .border-color-yellow {
   border-color: yellow;
 }
+.border-yellowgreen,
 .border-color-yellowgreen {
   border-color: yellowgreen;
 }
+.border-000,
 .border-color-000 {
   border-color: #000000;
 }
+.border-111,
 .border-color-111 {
   border-color: #111111;
 }
+.border-222,
 .border-color-222 {
   border-color: #222222;
 }
+.border-333,
 .border-color-333 {
   border-color: #333333;
 }
+.border-444,
 .border-color-444 {
   border-color: #444444;
 }
+.border-555,
 .border-color-555 {
   border-color: #555555;
 }
+.border-666,
 .border-color-666 {
   border-color: #666666;
 }
+.border-777,
 .border-color-777 {
   border-color: #777777;
 }
+.border-888,
 .border-color-888 {
   border-color: #888888;
 }
+.border-999,
 .border-color-999 {
   border-color: #999999;
 }
+.border-AAA,
 .border-color-AAA {
   border-color: #aaaaaa;
 }
+.border-BBB,
 .border-color-BBB {
   border-color: #bbbbbb;
 }
+.border-CCC,
 .border-color-CCC {
   border-color: #cccccc;
 }
+.border-DDD,
 .border-color-DDD {
   border-color: #dddddd;
 }
+.border-EEE,
 .border-color-EEE {
   border-color: #eeeeee;
 }
+.border-FFF,
 .border-color-FFF {
   border-color: #ffffff;
 }
