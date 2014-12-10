@@ -347,3 +347,24 @@
         clear: both;
     }
 }
+
+//
+// font-size & font-weight
+//
+.font- {
+    &size- {
+        .for(10, 50); .-each(@i) {
+            &@{i}px {
+                font-size: unit(@i, px);
+            }
+        }
+    }
+    &weight- {
+        &bold {
+            font-weight: bold;
+        }
+        &normal {
+            font-weight: normal;
+        }
+    }
+}
