@@ -104,21 +104,6 @@
             }
         }
     }
-    & {
-        .for(@directions); .-each(@direction) {
-            &@{direction}- {
-                &0,
-                &none {
-                    border-@{direction}-width: 0;
-                }
-                .for(5); .-each(@i) {
-                    &@{i}px {
-                        border-@{direction}-width: unit(@i, px);
-                    }
-                }
-            }
-        }
-    }
     &color- {
         & {
             .for(@colors); .-each(@color) {
@@ -137,9 +122,41 @@
             }
         }
     }
+    & {
+        .for(@directions); .-each(@direction) {
+            &@{direction}- {
+                &0,
+                &none {
+                    border-@{direction}-width: 0;
+                }
+                .for(5); .-each(@i) {
+                    &@{i}px {
+                        border-@{direction}-width: unit(@i, px);
+                    }
+                }
+                &,
+                &color- {
+                    & {
+                        .for(@colors); .-each(@color) {
+                            &@{color} {
+                                border-color: @color;
+                            }
+                        }
+                    }
+                    & {
+                        .for(length(@hex)); .-each(@i) {
+                            @h: extract(@hex, @i);
+                            &@{h}@{h}@{h} {
+                                @value: @i * 17 - 17;
+                                border-color: rgb(@value, @value, @value);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
-// to-do: border-[direction]-[color]
-
 
 //
 // background color
@@ -158,7 +175,7 @@
             @h: extract(@hex, @i);
             &@{h}@{h}@{h} {
                 @value: @i * 17 - 17;
-                border-color: rgb(@value, @value, @value);
+                background-color: rgb(@value, @value, @value);
             }
         }
     }
@@ -183,7 +200,7 @@
             @h: extract(@hex, @i);
             &@{h}@{h}@{h} {
                 @value: @i * 17 - 17;
-                border-color: rgb(@value, @value, @value);
+                color: rgb(@value, @value, @value);
             }
         }
     }
