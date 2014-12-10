@@ -42,6 +42,8 @@
 //
 // margin & padding
 //
+.area-class(margin);
+.area-class(padding);
 .area-class(@name) {
     .@{name}- {
         &0,
@@ -72,8 +74,6 @@
         }
     }    
 }
-.area-class(margin);
-.area-class(padding);
 
 //
 // border
@@ -108,7 +108,7 @@
                 }
                 &,
                 &color- {
-                    .color-mixin(border-color);
+                    .color-mixin(e("border-@{direction}-color"));
                 }
             }
         }
@@ -136,6 +136,12 @@
 //
 // width , height, min-width, min-height, max-width, max-height
 //
+.dimension-class(width);
+.dimension-class(height);
+.dimension-class(min-width);
+.dimension-class(min-height);
+.dimension-class(max-width);
+.dimension-class(max-height);
 .dimension-class(@name) {
     .@{name}- {
         & {
@@ -147,12 +153,6 @@
         }
     }
 }
-.dimension-class(width);
-.dimension-class(height);
-.dimension-class(min-width);
-.dimension-class(min-height);
-.dimension-class(max-width);
-.dimension-class(max-height);
 
 //
 // text-decoration & text-align
