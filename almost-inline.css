@@ -657,6 +657,10 @@
 .border-5px {
   border-width: 5px;
 }
+.border-left-0,
+.border-left-none {
+  border-left-width: 0;
+}
 .border-left-1px {
   border-left-width: 1px;
 }
@@ -671,6 +675,10 @@
 }
 .border-left-5px {
   border-left-width: 5px;
+}
+.border-right-0,
+.border-right-none {
+  border-right-width: 0;
 }
 .border-right-1px {
   border-right-width: 1px;
@@ -687,6 +695,10 @@
 .border-right-5px {
   border-right-width: 5px;
 }
+.border-top-0,
+.border-top-none {
+  border-top-width: 0;
+}
 .border-top-1px {
   border-top-width: 1px;
 }
@@ -701,6 +713,10 @@
 }
 .border-top-5px {
   border-top-width: 5px;
+}
+.border-bottom-0,
+.border-bottom-none {
+  border-bottom-width: 0;
 }
 .border-bottom-1px {
   border-bottom-width: 1px;

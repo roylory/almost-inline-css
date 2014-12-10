@@ -107,6 +107,10 @@
     & {
         .for(@directions); .-each(@direction) {
             &@{direction}- {
+                &0,
+                &none {
+                    border-@{direction}-width: 0;
+                }
                 .for(5); .-each(@i) {
                     &@{i}px {
                         border-@{direction}-width: unit(@i, px);
@@ -165,7 +169,8 @@
 // text color
 //
 .text-,
-.color- {
+.color-,
+.text-color- {
     & {
         .for(@colors); .-each(@color) {
             &@{color} {
