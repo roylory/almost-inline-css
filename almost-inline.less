@@ -26,68 +26,40 @@
 @directions: left, right, top, bottom;
 
 //
-// margin
+// margin & padding
 //
-.margin- {
-    &0,
-    &none {
-        margin: 0;
-    }
-    & {
-        .for(1, 20, 5); .-each(@i) {
-            &@{i}px {
-                margin: unit(@i, px);
+.area_prop(@name) {
+    .@{name}- {
+        &0,
+        &none {
+            margin: 0;
+        }
+        & {
+            .for(1, 20, 5); .-each(@i) {
+                &@{i}px {
+                    @{name}: unit(@i, px);
+                }
             }
         }
-    }
-    & {
-        .for(@directions); .-each(@direction) {
-            &@{direction}- {
-                &0,
-                &none {
-                    margin-@{direction}: 0;
-                }
-                .for(1, 20, 5); .-each(@i) {
-                    &@{i}px {
-                        margin-@{direction}: unit(@i, px);
+        & {
+            .for(@directions); .-each(@direction) {
+                &@{direction}- {
+                    &0,
+                    &none {
+                        @{name}-@{direction}: 0;
+                    }
+                    .for(1, 20, 5); .-each(@i) {
+                        &@{i}px {
+                            @{name}-@{direction}: unit(@i, px);
+                        }
                     }
                 }
             }
         }
-    }
+    }    
 }
-
-//
-// padding
-//
-.padding- {
-    &0,
-    &none {
-        padding: 0;
-    }
-    & {
-        .for(1, 20, 5); .-each(@i) {
-            &@{i}px {
-                padding: unit(@i, px);
-            }
-        }
-    }
-    & {
-        .for(@directions); .-each(@direction) {
-            &@{direction}- {
-                &0,
-                &none {
-                    padding-@{direction}: 0;
-                }
-                .for(1, 20, 5); .-each(@i) {
-                    &@{i}px {
-                        padding-@{direction}: unit(@i, px);
-                    }
-                }
-            }
-        }
-    }
-}
+.area_prop(margin);
+.area_prop(padding);
 
 //
 // border
