@@ -1,14 +1,32 @@
 //
 // .for & .foreach https://github.com/seven-phases-max/less.curious
 //
-.for(@i, @n, @inc:1) {.-each(@i * @inc)}
+.for(@i, @n) {.-each(@i)}
 .for(@n)     when (isnumber(@n)) {.for(1, @n)}
-.for(@i, @n, @inc:1) when not (@i = @n)  {
-    .for((@i + (@n - @i) / abs(@n - @i)), @n, @inc);
+.for(@i, @n) when not (@i = @n)  {
+    .for((@i + 1), @n);
 }
 .for(@array)   when (default()) {.for-impl_(length(@array))}
 .for-impl_(@i) when (@i > 1)    {.for-impl_((@i - 1))}
 .for-impl_(@i) when (@i > 0)    {.-each(extract(@array, @i))}
+
+//
+// .for-5 (increments by 5)
+//
+.for-5(@i, @n) {.-each(@i)}
+.for-5(@n)     when (isnumber(@n)) {.for-5(5, @n)} // starts from 5
+.for-5(@i, @n) when not (@i = @n)  {
+    .for-5((@i + 5), @n);
+}
+
+//
+// .for-20 (increments by 20)
+//
+.for-20(@i, @n) {.-each(@i)}
+.for-20(@n)     when (isnumber(@n)) {.for-20(20, @n)} // starts from 20
+.for-20(@i, @n) when not (@i = @n)  {
+    .for-20((@i + 20), @n);
+}
 
 //
 // colors (alphabetically ordered)
@@ -29,7 +47,7 @@
         margin: 0;
     }
     & {
-        .for(1, 20, 5); .-each(@i) {
+        .for-5(100); .-each(@i) {
             &@{i}px {
                 margin: unit(@i, px);
             }
@@ -42,7 +60,7 @@
                 &none {
                     margin-@{direction}: 0;
                 }
-                .for(1, 20, 5); .-each(@i) {
+                .for-5(100); .-each(@i) {
                     &@{i}px {
                         margin-@{direction}: unit(@i, px);
                     }
@@ -61,7 +79,7 @@
         padding: 0;
     }
     & {
-        .for(1, 20, 5); .-each(@i) {
+        .for-5(100); .-each(@i) {
             &@{i}px {
                 padding: unit(@i, px);
             }
@@ -74,7 +92,7 @@
                 &none {
                     padding-@{direction}: 0;
                 }
-                .for(1, 20, 5); .-each(@i) {
+                .for-5(100); .-each(@i) {
                     &@{i}px {
                         padding-@{direction}: unit(@i, px);
                     }
@@ -294,7 +312,7 @@
 //
 .width- {
     & {
-        .for(1, 50, 20); .-each(@i) {
+        .for-20(1000); .-each(@i) {
             &@{i}px {
                 width: unit(@i, px);
             }
@@ -307,7 +325,7 @@
 //
 .height- {
     & {
-        .for(1, 50, 20); .-each(@i) {
+        .for-20(1000); .-each(@i) {
             &@{i}px {
                 height: unit(@i, px);
             }
@@ -320,7 +338,7 @@
 //
 .min-width- {
     & {
-        .for(1, 50, 20); .-each(@i) {
+        .for-20(1000); .-each(@i) {
             &@{i}px {
                 min-width: unit(@i, px);
             }
@@ -333,7 +351,7 @@
 //
 .min-height- {
     & {
-        .for(1, 50, 20); .-each(@i) {
+        .for-20(1000); .-each(@i) {
             &@{i}px {
                 min-height: unit(@i, px);
             }
