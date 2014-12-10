@@ -1,7 +1,7 @@
 //
 // .for & .foreach https://github.com/seven-phases-max/less.curious
 //
-.for(@i, @n, @inc:1) {.-each(@i * @inc)}
+.for(@i, @n, @inc:1) {.-each(@i * @inc)} // added @inc
 .for(@n)     when (isnumber(@n)) {.for(1, @n)}
 .for(@i, @n, @inc:1) when not (@i = @n)  {
     .for((@i + (@n - @i) / abs(@n - @i)), @n, @inc);
@@ -14,6 +14,11 @@
 // colors (alphabetically ordered)
 //
 @colors: aqua, black, blue, brown, cyan, gold, gray, green, lime, maroon, navy, pink, red, salmon, silver, skyblue, tan, teal, tomato, violet, white, yellow, yellowgreen;
+
+//
+// hex
+//
+@hex: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F;
 
 //
 // directions
@@ -111,181 +116,71 @@
         }
     }
     &color- {
-        .for(@colors); .-each(@color) {
-            &@{color} {
-                border-color: @color;
+        & {
+            .for(@colors); .-each(@color) {
+                &@{color} {
+                    border-color: @color;
+                }
             }
         }
-        &000 {
-            border-color: #000;
-        }
-        &111 {
-            border-color: #111;
-        }
-        &222 {
-            border-color: #222;
-        }
-        &333 {
-            border-color: #333;
-        }
-        &444 {
-            border-color: #444;
-        }
-        &555 {
-            border-color: #555;
-        }
-        &666 {
-            border-color: #666;
-        }
-        &777 {
-            border-color: #777;
-        }
-        &888 {
-            border-color: #888;
-        }
-        &999 {
-            border-color: #999;
-        }
-        &aaa {
-            border-color: #aaa;
-        }
-        &bbb {
-            border-color: #bbb;
-        }
-        &ccc {
-            border-color: #ccc;
-        }
-        &ddd {
-            border-color: #ddd;
-        }
-        &eee {
-            border-color: #eee;
-        }
-        &fff {
-            border-color: #fff;
+        & {
+            .for(length(@hex)); .-each(@i) {
+                @h: extract(@hex, @i);
+                &@{h}@{h}@{h} {
+                    @value: @i * 17 - 17;
+                    border-color: rgb(@value, @value, @value);
+                }
+            }
         }
     }
 }
-// to-do: border-[direction]-color, border-style, border-[direction]-style
+// to-do: border-[direction]-[color]
 
 
 //
-// background-color
+// background color
 //
 .background-,
 .bg- {
-    .for(@colors); .-each(@color) {
-        &@{color} {
-            background-color: @color;
+    & {
+        .for(@colors); .-each(@color) {
+            &@{color} {
+                background-color: @color;
+            }
         }
     }
-    &000 {
-        background-color: #000;
-    }
-    &111 {
-        background-color: #111;
-    }
-    &222 {
-        background-color: #222;
-    }
-    &333 {
-        background-color: #333;
-    }
-    &444 {
-        background-color: #444;
-    }
-    &555 {
-        background-color: #555;
-    }
-    &666 {
-        background-color: #666;
-    }
-    &777 {
-        background-color: #777;
-    }
-    &888 {
-        background-color: #888;
-    }
-    &999 {
-        background-color: #999;
-    }
-    &aaa {
-        background-color: #aaa;
-    }
-    &bbb {
-        background-color: #bbb;
-    }
-    &ccc {
-        background-color: #ccc;
-    }
-    &ddd {
-        background-color: #ddd;
-    }
-    &eee {
-        background-color: #eee;
-    }
-    &fff {
-        background-color: #fff;
+    & {
+        .for(length(@hex)); .-each(@i) {
+            @h: extract(@hex, @i);
+            &@{h}@{h}@{h} {
+                @value: @i * 17 - 17;
+                border-color: rgb(@value, @value, @value);
+            }
+        }
     }
 }
 
 
 //
-// (text) color
+// text color
 //
+.text-,
 .color- {
-    .for(@colors); .-each(@color) {
-        &@{color} {
-            color: @color;
+    & {
+        .for(@colors); .-each(@color) {
+            &@{color} {
+                color: @color;
+            }
         }
     }
-    &000 {
-        color: #000;
-    }
-    &111 {
-        color: #111;
-    }
-    &222 {
-        color: #222;
-    }
-    &333 {
-        color: #333;
-    }
-    &444 {
-        color: #444;
-    }
-    &555 {
-        color: #555;
-    }
-    &666 {
-        color: #666;
-    }
-    &777 {
-        color: #777;
-    }
-    &888 {
-        color: #888;
-    }
-    &999 {
-        color: #999;
-    }
-    &aaa {
-        color: #aaa;
-    }
-    &bbb {
-        color: #bbb;
-    }
-    &ccc {
-        color: #ccc;
-    }
-    &ddd {
-        color: #ddd;
-    }
-    &eee {
-        color: #eee;
-    }
-    &fff {
-        color: #fff;
+    & {
+        .for(length(@hex)); .-each(@i) {
+            @h: extract(@hex, @i);
+            &@{h}@{h}@{h} {
+                @value: @i * 17 - 17;
+                border-color: rgb(@value, @value, @value);
+            }
+        }
     }
 }
 

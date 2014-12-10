@@ -787,52 +787,52 @@
   border-color: yellowgreen;
 }
 .border-color-000 {
-  border-color: #000;
+  border-color: #000000;
 }
 .border-color-111 {
-  border-color: #111;
+  border-color: #111111;
 }
 .border-color-222 {
-  border-color: #222;
+  border-color: #222222;
 }
 .border-color-333 {
-  border-color: #333;
+  border-color: #333333;
 }
 .border-color-444 {
-  border-color: #444;
+  border-color: #444444;
 }
 .border-color-555 {
-  border-color: #555;
+  border-color: #555555;
 }
 .border-color-666 {
-  border-color: #666;
+  border-color: #666666;
 }
 .border-color-777 {
-  border-color: #777;
+  border-color: #777777;
 }
 .border-color-888 {
-  border-color: #888;
+  border-color: #888888;
 }
 .border-color-999 {
-  border-color: #999;
+  border-color: #999999;
 }
-.border-color-aaa {
-  border-color: #aaa;
+.border-color-AAA {
+  border-color: #aaaaaa;
 }
-.border-color-bbb {
-  border-color: #bbb;
+.border-color-BBB {
+  border-color: #bbbbbb;
 }
-.border-color-ccc {
-  border-color: #ccc;
+.border-color-CCC {
+  border-color: #cccccc;
 }
-.border-color-ddd {
-  border-color: #ddd;
+.border-color-DDD {
+  border-color: #dddddd;
 }
-.border-color-eee {
-  border-color: #eee;
+.border-color-EEE {
+  border-color: #eeeeee;
 }
-.border-color-fff {
-  border-color: #fff;
+.border-color-FFF {
+  border-color: #ffffff;
 }
 .background-aqua,
 .bg-aqua {
@@ -928,184 +928,223 @@
 }
 .background-000,
 .bg-000 {
-  background-color: #000;
+  border-color: #000000;
 }
 .background-111,
 .bg-111 {
-  background-color: #111;
+  border-color: #111111;
 }
 .background-222,
 .bg-222 {
-  background-color: #222;
+  border-color: #222222;
 }
 .background-333,
 .bg-333 {
-  background-color: #333;
+  border-color: #333333;
 }
 .background-444,
 .bg-444 {
-  background-color: #444;
+  border-color: #444444;
 }
 .background-555,
 .bg-555 {
-  background-color: #555;
+  border-color: #555555;
 }
 .background-666,
 .bg-666 {
-  background-color: #666;
+  border-color: #666666;
 }
 .background-777,
 .bg-777 {
-  background-color: #777;
+  border-color: #777777;
 }
 .background-888,
 .bg-888 {
-  background-color: #888;
+  border-color: #888888;
 }
 .background-999,
 .bg-999 {
-  background-color: #999;
+  border-color: #999999;
 }
-.background-aaa,
-.bg-aaa {
-  background-color: #aaa;
+.background-AAA,
+.bg-AAA {
+  border-color: #aaaaaa;
 }
-.background-bbb,
-.bg-bbb {
-  background-color: #bbb;
+.background-BBB,
+.bg-BBB {
+  border-color: #bbbbbb;
 }
-.background-ccc,
-.bg-ccc {
-  background-color: #ccc;
+.background-CCC,
+.bg-CCC {
+  border-color: #cccccc;
 }
-.background-ddd,
-.bg-ddd {
-  background-color: #ddd;
+.background-DDD,
+.bg-DDD {
+  border-color: #dddddd;
 }
-.background-eee,
-.bg-eee {
-  background-color: #eee;
+.background-EEE,
+.bg-EEE {
+  border-color: #eeeeee;
 }
-.background-fff,
-.bg-fff {
-  background-color: #fff;
+.background-FFF,
+.bg-FFF {
+  border-color: #ffffff;
 }
+.text-aqua,
 .color-aqua {
   color: aqua;
 }
+.text-black,
 .color-black {
   color: black;
 }
+.text-blue,
 .color-blue {
   color: blue;
 }
+.text-brown,
 .color-brown {
   color: brown;
 }
+.text-cyan,
 .color-cyan {
   color: cyan;
 }
+.text-gold,
 .color-gold {
   color: gold;
 }
+.text-gray,
 .color-gray {
   color: gray;
 }
+.text-green,
 .color-green {
   color: green;
 }
+.text-lime,
 .color-lime {
   color: lime;
 }
+.text-maroon,
 .color-maroon {
   color: maroon;
 }
+.text-navy,
 .color-navy {
   color: navy;
 }
+.text-pink,
 .color-pink {
   color: pink;
 }
+.text-red,
 .color-red {
   color: red;
 }
+.text-salmon,
 .color-salmon {
   color: salmon;
 }
+.text-silver,
 .color-silver {
   color: silver;
 }
+.text-skyblue,
 .color-skyblue {
   color: skyblue;
 }
+.text-tan,
 .color-tan {
   color: tan;
 }
+.text-teal,
 .color-teal {
   color: teal;
 }
+.text-tomato,
 .color-tomato {
   color: tomato;
 }
+.text-violet,
 .color-violet {
   color: violet;
 }
+.text-white,
 .color-white {
   color: white;
 }
+.text-yellow,
 .color-yellow {
   color: yellow;
 }
+.text-yellowgreen,
 .color-yellowgreen {
   color: yellowgreen;
 }
+.text-000,
 .color-000 {
-  color: #000;
+  border-color: #000000;
 }
+.text-111,
 .color-111 {
-  color: #111;
+  border-color: #111111;
 }
+.text-222,
 .color-222 {
-  color: #222;
+  border-color: #222222;
 }
+.text-333,
 .color-333 {
-  color: #333;
+  border-color: #333333;
 }
+.text-444,
 .color-444 {
-  color: #444;
+  border-color: #444444;
 }
+.text-555,
 .color-555 {
-  color: #555;
+  border-color: #555555;
 }
+.text-666,
 .color-666 {
-  color: #666;
+  border-color: #666666;
 }
+.text-777,
 .color-777 {
-  color: #777;
+  border-color: #777777;
 }
+.text-888,
 .color-888 {
-  color: #888;
+  border-color: #888888;
 }
+.text-999,
 .color-999 {
-  color: #999;
+  border-color: #999999;
 }
-.color-aaa {
-  color: #aaa;
+.text-AAA,
+.color-AAA {
+  border-color: #aaaaaa;
 }
-.color-bbb {
-  color: #bbb;
+.text-BBB,
+.color-BBB {
+  border-color: #bbbbbb;
 }
-.color-ccc {
-  color: #ccc;
+.text-CCC,
+.color-CCC {
+  border-color: #cccccc;
 }
-.color-ddd {
-  color: #ddd;
+.text-DDD,
+.color-DDD {
+  border-color: #dddddd;
 }
-.color-eee {
-  color: #eee;
+.text-EEE,
+.color-EEE {
+  border-color: #eeeeee;
 }
-.color-fff {
-  color: #fff;
+.text-FFF,
+.color-FFF {
+  border-color: #ffffff;
 }
 .width-20px {
   width: 20px;
