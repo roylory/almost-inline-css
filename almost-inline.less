@@ -24,11 +24,9 @@
         }
     }
     & {
-        .for(length(@hex)); .-each(@i) {
-            @h: extract(@hex, @i);
+        .for(@hex); .-each(@h) {
             &@{h}@{h}@{h} {
-                @value: @i * 17 - 17;
-                @{name}: rgb(@value, @value, @value);
+                @{name}: e("#@{h}@{h}@{h}");
             }
         }
     }
@@ -247,6 +245,7 @@
 //
 // font-size & font-weight
 //
+/*csslint font-sizes: false */
 .font- {
     &size- {
         .for(10, 50); .-each(@i) {

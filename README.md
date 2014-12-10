@@ -21,7 +21,7 @@ A collection of inline-like CSS classes. It is not considered as a good practice
 
 ## width height
 ```css
-/* width height examples */
+/* width, height examples */
 .width-300px { width: 300px }
 .height-520px { height: 520px }
 .min-width-140px { min-width: 140px }
