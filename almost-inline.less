@@ -207,56 +207,25 @@
 }
 
 //
-// width
+// width , height, min-width, min-height, max-width, max-height
 //
-.width- {
-    & {
-        .for(1, 50, 20); .-each(@i) {
-            &@{i}px {
-                width: unit(@i, px);
+.dimension_prop(@name) {
+    .@{name}- {
+        & {
+            .for(1, 50, 20); .-each(@i) {
+                &@{i}px {
+                    @{name}: unit(@i, px);
+                }
             }
         }
     }
 }
-
-//
-// height
-//
-.height- {
-    & {
-        .for(1, 50, 20); .-each(@i) {
-            &@{i}px {
-                height: unit(@i, px);
-            }
-        }
-    }
-}
-
-//
-// min-width
-//
-.min-width- {
-    & {
-        .for(1, 50, 20); .-each(@i) {
-            &@{i}px {
-                min-width: unit(@i, px);
-            }
-        }
-    }
-}
-
-//
-// min-height
-//
-.min-height- {
-    & {
-        .for(1, 50, 20); .-each(@i) {
-            &@{i}px {
-                min-height: unit(@i, px);
-            }
-        }
-    }
-}
+.dimension_prop(width);
+.dimension_prop(height);
+.dimension_prop(min-width);
+.dimension_prop(min-height);
+.dimension_prop(max-width);
+.dimension_prop(max-height);
 
 //
 // text-decoration & text-align
