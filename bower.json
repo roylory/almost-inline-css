@@ -1,0 +1,24 @@
+{
+  "name": "almost-inline-css",
+  "version": "1.0.0",
+  "homepage": "https://github.com/roylory/almost-inline-css",
+  "authors": [
+    "roylory <roylory@gmail.com>"
+  ],
+  "description": "A collection of inline-like CSS classes",
+  "main": "almost-inline.min.css",
+  "keywords": [
+    "inline",
+    "style",
+    "css",
+    "helper"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
