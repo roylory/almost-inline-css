@@ -1,6 +1,6 @@
 #almost-inline.css
 
-A collection of inline-like CSS classes. It is not considered as a good practice to use this CSS. Use it responsibly!
+A collection of inline-like CSS classes. It is not considered as a good practice to use this CSS, but sometimes it could be very useful.
 
 ##margin
 ```css
