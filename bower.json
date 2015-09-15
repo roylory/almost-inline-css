@@ -1,6 +1,6 @@
 {
   "name": "almost-inline-css",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "https://github.com/roylory/almost-inline-css",
   "authors": [
     "roylory <roylory@gmail.com>"
@@ -19,6 +19,7 @@
     "node_modules",
     "bower_components",
     "test",
-    "tests"
+    "tests",
+	"bak"
   ]
 }

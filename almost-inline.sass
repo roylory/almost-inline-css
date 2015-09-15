@@ -1,0 +1,168 @@
+//
+// color mixin
+//
+@mixin color-mixin($name)
+  $colors: aqua, black, blue, brown, cyan, gold, gray, green, lime, maroon, navy, pink, red, salmon, silver, skyblue, tan, teal, tomato, violet, white, yellow, yellowgreen
+  $hex: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F
+  $sharp: '#'
+  @each $color in $colors
+    &#{$color}
+      #{$name}: $color
+  @each $h in $hex
+    &#{$h}#{$h}#{$h}
+      #{$name}: #{$sharp}#{$h}#{$h}#{$h}
+
+//
+// direction list
+//
+$directions: left, right, top, bottom
+
+//
+// margin & padding
+//
+$box-classes: margin, padding
+@each $name in $box-classes
+  .#{$name}-
+    &0,
+    &none
+      #{$name}: 0
+    @for $i from 1 through 20
+      &#{$i*5}px
+        #{$name}: #{$i*5}px
+    @each $direction in $directions
+      &#{$direction}-
+        &0,
+        &none
+          #{$name}-#{$direction}: 0
+        @for $i from 1 through 20
+          &#{$i*5}px
+            #{$name}-#{$direction}: #{$i*5}px
+
+//
+// border
+//
+.border-
+  &0,
+  &none
+    border: none
+  @for $i from 1 through 5
+    &#{$i}px
+      border-width: #{$i}px
+  &,
+  &color-
+    @include color-mixin(border-color)
+  @each $direction in $directions
+    &#{$direction}-
+      &0,
+      &none
+        border-#{$direction}-width: 0
+      @for $i from 1 through 5
+        &#{$i}px
+          border-#{$direction}-width: #{$i}px
+      &,
+      &color-
+        @include color-mixin(border-#{$direction}-color)
+
+//
+// background color
+//
+.background-,
+.bg-
+  @include color-mixin(background-color)
+
+//
+// text color
+//
+.text-,
+.color-,
+.text-color-
+  @include color-mixin(color)
+
+//
+// width , height, min-width, min-height, max-width, max-height
+//
+$dimension-classes: width, height, min-width, min-height, max-width, max-height
+@each $name in $dimension-classes
+  .#{$name}-
+    @for $i from 1 through 50
+      &#{$i*20}px
+        #{$name}: #{$i*20}px
+
+//
+// text-decoration & text-align
+//
+.text-
+  &,
+  &decoration-
+    &none
+      text-decoration: none
+    &underline
+      text-decoration: underline
+    &dashed
+      text-decoration: dashed
+    &dotted
+      text-decoration: dotted
+  &,
+  &align-
+    &left
+      text-align: left
+    &right
+      text-align: right
+    &center
+      text-align: center
+
+//
+// vertical-align
+//
+.valign-,
+.vertical-align-
+  &top
+    vertical-align: top
+  &middle
+    vertical-align: middle
+  &bottom
+    vertical-align: bottom
+
+//
+// display
+//
+.display-
+  &inline
+    display: inline
+  &block
+    display: block
+  &inline-block
+    display: inline-block
+  &none
+    display: none
+
+//
+// float & clear
+//
+.float-
+  &left
+    float: left
+  &right
+    float: right
+.clear-
+  &left
+    clear: left
+  &right
+    clear: right
+  &both
+    clear: both
+
+//
+// font-size & font-weight
+//
+/*csslint font-sizes: false */
+.font-
+  &size-
+    @for $i from 10 through 50
+      &#{$i}px
+        font-size: #{$i}px
+  &weight-
+    &bold
+      font-weight: bold
+    &normal
+      font-weight: normal
