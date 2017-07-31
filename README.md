@@ -1,8 +1,8 @@
-#almost-inline.css
+# almost-inline.css
 
 A collection of inline-like CSS classes. It is not considered as a good practice to use this CSS, but sometimes it could be very useful.
 
-##margin
+## margin
 ```css
 /* margin examples */
 .margin-none { margin: none }
@@ -11,7 +11,7 @@ A collection of inline-like CSS classes. It is not considered as a good practice
 .margin-top-25px { margin-top: 25px }
 ```
 
-##padding
+## padding
 ```css
 /* padding examples */
 .padding-none { padding: none }
@@ -30,7 +30,7 @@ A collection of inline-like CSS classes. It is not considered as a good practice
 .max-height-860px { max-height: 860px }
 ```
 
-##border, border-color
+## border, border-color
 ```css
 /* border examples */
 .border-1px { border-width: 1px }
@@ -40,14 +40,14 @@ A collection of inline-like CSS classes. It is not considered as a good practice
 .border-top-green { border-top-color: green }
 ```
 
-##background-color
+## background-color
 ```css
 /* bg examples */
 .bg-pink { background-color: pink }
 .bg-EEE { background-color: #EEE }
 ```
 
-##text
+## text
 ```css
 /* text examples */
 .text-red { color: red } /* same as .color-red */
@@ -56,14 +56,14 @@ A collection of inline-like CSS classes. It is not considered as a good practice
 .text-center { text-align: center } /* same as .text-align-center */
 ```
 
-##vertical-align
+## vertical-align
 ```css
 /* vertical align examples */
 .valign-middle { vertical-align: middle } /* same as .vertial-align-middle */
 .valign-top { vertical-align: top } /* same as .vertial-align-top */
 ```
 
-##display
+## display
 ```css
 /* display examples */
 .display-none { display: none }
@@ -72,7 +72,7 @@ A collection of inline-like CSS classes. It is not considered as a good practice
 .display-inline { display: inline }
 ```
 
-##others
+## others
 ```css
 /* other examples */
 .float-left { float: left }
