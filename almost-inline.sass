@@ -133,8 +133,49 @@ $dimension-classes: width, height, min-width, min-height, max-width, max-height
     display: block
   &inline-block
     display: inline-block
+  &flex
+    display: flex
+  &inline-flex
+    display: inline-flex
   &none
     display: none
+
+//
+// flex
+//
+$flex-directions: row, row-reverse, column, column-reverse
+.flex-
+  @for $i from 1 through 12
+    &#{$i}
+      flex: #{$i}
+  &auto
+    flex: auto
+  &none
+    flex: none
+  &grow-
+    @for $i from 1 through 12
+      &#{$i}
+        flex-grow: #{$i}
+  &shrink-
+    @for $i from 1 through 12
+      &#{$i}
+        flex-shrink: #{$i}
+  @each $direction in $flex-directions
+    &direction-#{$direction},
+    &#{$direction}
+      flex-direction: $direction
+
+//
+// justify-content & align-items
+//
+$justify-content: start, end, flex-start, flex-end, center, space-between, space-around, space-evenly, left, right, normal, stretch
+$align-items: start, end, center, baseline, stretch, flex-start, flex-end, self-start, self-end, normal
+@each $jc in $justify-content
+  .justify-content-#{$jc}
+    justify-content: $jc
+@each $ai in $align-items
+  .align-items-#{$ai}
+    align-items: $ai
 
 //
 // float & clear

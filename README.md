@@ -70,6 +70,19 @@ A collection of inline-like CSS classes. It is not considered as a good practice
 .display-block { display: block }
 .display-inline-block { display: inline-block }
 .display-inline { display: inline }
+.display-flex { display: flex }
+.display-inline-flex { display: inline-flex }
+```
+
+## flex
+```css
+/* flex examples */
+.flex-1 { flex: 1 }
+.flex-auto { flex: auto }
+.flex-column { flex-direction: column }
+.flex-grow-1 { flex-grow: 1 }
+.justify-content-center { justify-content: center }
+.align-items-center { align-items: center }
 ```
 
 ## others
