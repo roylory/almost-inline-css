@@ -1,0 +1,15 @@
+{
+  "name": "almost-inline-css",
+  "description": "A collection of inline-like CSS classes",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/roylory/almost-inline-css.git",
+  "author": "Royce Joe <roylory@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "sass --no-source-map --style compressed almost-inline.sass almost-inline.min.css"
+  },
+  "devDependencies": {
+    "sass": "^1.69.5"
+  }
+}
