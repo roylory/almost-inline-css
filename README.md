@@ -1,8 +1,8 @@
 # almost-inline.css
 
-A collection of inline-like CSS classes. It is not considered as a good practice to use this CSS, but sometimes it could be very useful.
+A collection of inline-like CSS classes. It is not considered as a good practice, but sometimes it could be very useful. Similar philosophy as tailwindcss.
 
-## margin padding
+## margin, padding
 ```css
 /* margin, padding examples */
 .margin-none { margin: none }
@@ -12,7 +12,7 @@ A collection of inline-like CSS classes. It is not considered as a good practice
 .padding-right-100px { padding-right: 100px }
 ```
 
-## width height
+## width, height
 ```css
 /* width, height examples */
 .width-300px { width: 300px }
