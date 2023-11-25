@@ -2,19 +2,12 @@
 
 A collection of inline-like CSS classes. It is not considered as a good practice to use this CSS, but sometimes it could be very useful.
 
-## margin
+## margin padding
 ```css
-/* margin examples */
+/* margin, padding examples */
 .margin-none { margin: none }
 .margin-10px { margin: 10px }
-.margin-left-5px { margin-left: 5px }
 .margin-top-25px { margin-top: 25px }
-```
-
-## padding
-```css
-/* padding examples */
-.padding-none { padding: none }
 .padding-5px { padding: 5px }
 .padding-right-100px { padding-right: 100px }
 ```
@@ -79,7 +72,7 @@ A collection of inline-like CSS classes. It is not considered as a good practice
 /* flex examples */
 .flex-1 { flex: 1 }
 .flex-auto { flex: auto }
-.flex-column { flex-direction: column }
+.flex-column { flex-direction: column } /* same as .flex-direction-column */
 .flex-grow-1 { flex-grow: 1 }
 .justify-content-center { justify-content: center }
 .align-items-center { align-items: center }
